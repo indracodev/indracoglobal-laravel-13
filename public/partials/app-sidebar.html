@@ -3,52 +3,137 @@
       <button class="btn-close rounded-0 border-0 shadow-none" type="button" data-bs-dismiss="offcanvas"></button>
    </div>
    <div class="offcanvas-body vstack p-0">
-      <nav aria-label="navigasi pada tampilan seluler" class="flex-grow-1 p-3">
-         <ul class="list-unstyled text-capitalize vstack row-gap-3">
+      <nav aria-label="navigasi pada tampilan seluler" class="flex-grow-1 px-3">
+         <ul class="list-unstyled text-capitalize vstack">
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   tentang kami
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a data-bs-toggle="collapse" href="#collapseProduct"
+                  class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2 collapse-toggle collapsed">
                   produk
                </a>
+               <div id="collapseProduct" class="collapse">
+                  <ul class="list-unstyled vstack ps-3 pb-3">
+                     <li>
+                        <a data-bs-toggle="collapse" href="#collapseProductConsument"
+                           class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2 collapse-toggle collapsed">
+                           produk konsumen
+                        </a>
+                        <div id="collapseProductConsument" class="collapse">
+                           <ul class="list-unstyled vstack ps-3 pb-3">
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    Supresso
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    BaliCafé
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    UCAFÉ
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    rasa sayang
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    tugu buaya
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    uang emas
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    BROCHOCO
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    jaheku
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    intiRasa
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#"
+                                    class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                                    hao cafe
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li>
+                        <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                           layanan makanan
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
+                           mesin-mesin & peralatan khusus
+                        </a>
+                     </li>
+                  </ul>
+               </div>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   bisnis
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   toko daring
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   berita
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   unduhan
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   karir
                </a>
             </li>
             <li>
-               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover">
+               <a href="#" class="link-body-emphasis text-decoration-none link-opacity-50-hover d-block py-2">
                   kontak
                </a>
             </li>
          </ul>
       </nav>
       <div class="bg-body p-3 pt-0 sticky-bottom">
-         <hr>
+         <hr class="mt-0">
          <div class="vstack row-gap-3">
             <div data-include="../components/navlink-to-indracostore.html"></div>
             <div data-include="../components/btn-sub-en.html"></div>

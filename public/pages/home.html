@@ -24,7 +24,73 @@
    <div aria-label="pembungkus halaman" id="app-wrapper">
       <header aria-label="tajuk halaman" id="app-header" class="sticky-top" data-include="../partials/app-header.html">
       </header>
-      <main aria-label="konten utama" id="app-content"></main>
+      <main aria-label="konten utama" id="app-content">
+
+         <style>
+            .hero-banner {
+               aspect-ratio: 3/5;
+            }
+
+            @media (min-width: 648px) {
+               .hero-banner {
+                  aspect-ratio: 4/3;
+               }
+            }
+
+            @media (min-width: 992px) {
+               .hero-banner {
+                  aspect-ratio: 21/9;
+               }
+            }
+
+            .videotron {
+               width: auto;
+               height: 135%;
+            }
+
+            @media (min-width: 992px) {
+               .videotron {
+                  width: 110%;
+                  height: auto;
+               }
+            }
+         </style>
+         <section aria-labelledby="hero-banner-title">
+            <div class="hero-banner position-relative overflow-hidden bg-secondary">
+               <div class="videotron position-absolute top-50 start-50 translate-middle" style="aspect-ratio: 16/9;">
+                  <div class="ratio ratio-16x9 overflow-hidden pointer-event-none">
+                     <iframe class="position-absolute top-50 start-50 translate-middle w-100 h-100"
+                        src="https://www.youtube.com/embed/3hBq81Sz_Vk?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=3hBq81Sz_Vk&amp;controls=0&amp;modestbranding=1&amp;rel=0&amp;playsinline=1"
+                        loading="eager" aria-hidden="true" tabindex="-1" title="Video profil INDRACO" frameborder="0"
+                        allow="autoplay; fullscreen; compute-pressure"></iframe>
+                  </div>
+               </div>
+               <div class="z-1 video-overlay position-absolute bg-black opacity-50"
+                  style="inset: 0; pointer-events: none;"></div>
+               <div
+                  class="banner-caption z-2 position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center p-4">
+                  <div class="container">
+                     <div class="text-white" style="max-width: 660px;">
+                        <h1 id="hero-banner-title" class="visually-hidden">
+                           Mendekatkan Rasa dengan Kopi Berkualitas Sejak 1971
+                        </h1>
+                        <h2 class="display-5 fw-bold" data-i18n="home_banner_title">
+                           Mendekatkan Rasa, Menghubungkan Kehidupan.
+                        </h2>
+                        <p class="lead mb-4" data-i18n="home_banner_text">
+                           Dari secangkir kopi hingga berbagai produk sehari-hari, INDRACO hadir untuk membuat hidup
+                           lebih hangat, praktis, dan bermakna.
+                        </p>
+                        <a href="about.html" class="btn btn-outline-light rounded-0" data-i18n="learn_more">
+                           Lanjut Pelajari
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+      </main>
       <footer aria-label="kaki halaman" id="app-footer" class="bg-body-tertiary py-3 small"
          data-include="../partials/app-footer.html"></footer>
    </div>
