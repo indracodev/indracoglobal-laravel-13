@@ -50,6 +50,15 @@ body {
    position: relative;
 }
 
+#app-header {
+   transition: transform 0.3s ease-in-out;
+   will-change: transform;
+}
+
+#app-header.header-hidden {
+   transform: translateY(-100%);
+}
+
 #app-content {
    flex-grow: 1;
 }
