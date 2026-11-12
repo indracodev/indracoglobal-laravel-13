@@ -1,6 +1,26 @@
 (function () {
    const SCROLL_DELTA = 5;
 
+   const initHoverTabs = () => {
+      const hoverDevice = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+      document.addEventListener("pointerover", (event) => {
+         if (!hoverDevice.matches || !(event.target instanceof Element)) {
+            return;
+         }
+
+         const tabTrigger = event.target.closest(
+            '#app-header [data-bs-toggle="pill"][data-bs-target]'
+         );
+
+         if (!tabTrigger || (event.relatedTarget instanceof Node && tabTrigger.contains(event.relatedTarget))) {
+            return;
+         }
+
+         window.bootstrap.Tab.getOrCreateInstance(tabTrigger).show();
+      });
+   };
+
    const initSmartHeader = () => {
       const appWrapper = document.getElementById("app-wrapper");
       const appHeader = document.getElementById("app-header");
@@ -56,9 +76,12 @@
    };
 
    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initSmartHeader);
+      document.addEventListener("DOMContentLoaded", () => {
+         initSmartHeader();
+         initHoverTabs();
+      });
    } else {
       initSmartHeader();
+      initHoverTabs();
    }
 })();
-

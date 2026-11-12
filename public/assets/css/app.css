@@ -1,5 +1,7 @@
 :root,
 [data-bs-theme="light"] {
+   /* --bs-body-color: #525252; */
+   /* --bs-body-color-rgb: 82, 82, 82; */
    --bs-tertiary-bg: #f4f4f4;
    --bs-tertiary-bg-rgb: 244, 244, 244;
    --bs-border-color: color-mix(in srgb, currentColor 50%, transparent);
@@ -7,6 +9,8 @@
 }
 
 [data-bs-theme="dark"] {
+   /* --bs-body-color: #dee2e6; */
+   /* --bs-body-color-rgb: 222, 226, 230; */
    --bs-body-bg: #262626;
    --bs-body-bg-rgb: 38, 38, 38;
    --bs-tertiary-bg: #333333;
