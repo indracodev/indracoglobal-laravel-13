@@ -1,27 +1,44 @@
 :root,
 [data-bs-theme="light"] {
-   /* --bs-body-color: #525252; */
-   /* --bs-body-color-rgb: 82, 82, 82; */
+   --bs-body-color: #262626;
+   --bs-body-color-rgb: 38, 38, 38;
    --bs-tertiary-bg: #f4f4f4;
    --bs-tertiary-bg-rgb: 244, 244, 244;
-   --bs-border-color: color-mix(in srgb, currentColor 50%, transparent);
+   --bs-border-color: color-mix(in srgb, currentColor 30%, transparent);
    --bs-border-color-translucent: var(--bs-border-color);
 }
 
 [data-bs-theme="dark"] {
-   /* --bs-body-color: #dee2e6; */
-   /* --bs-body-color-rgb: 222, 226, 230; */
+   --bs-body-color: #dee2e6;
+   --bs-body-color-rgb: 222, 226, 230;
    --bs-body-bg: #262626;
    --bs-body-bg-rgb: 38, 38, 38;
    --bs-tertiary-bg: #333333;
    --bs-tertiary-bg-rgb: 51, 51, 51;
-   --bs-border-color: color-mix(in srgb, currentColor 25%, transparent);
+   --bs-border-color: color-mix(in srgb, currentColor 30%, transparent);
    --bs-border-color-translucent: var(--bs-border-color);
 }
 
-.text-muted,
+/* .text-muted,
 *::placeholder {
    color: color-mix(in srgb, currentColor 60%, transparent) !important;
+} */
+
+.btn-outline {
+   color: var(--bs-body-color);
+   border: solid 1px color-mix(in srgb, var(--bs-body-color) 60%, transparent);
+
+   &:hover,
+   &:focus-within,
+   &.active {
+      color: var(--bs-body-bg);
+      background-color: var(--bs-body-color);
+      border: solid 1px color-mix(in srgb, var(--bs-body-color) 100%, transparent);
+   }
+}
+
+.border-body {
+   border-color: var(--bs-body-color) !important;
 }
 
 hr {
@@ -99,37 +116,6 @@ body {
    }
 }
 
-.link-body-emphasis {
-   color: currentColor !important;
-
-   &.active {
-      opacity: .5 !important;
-      pointer-events: none !important;
-   }
-}
-
-.collapse-toggle {
-   position: relative;
-
-   &::after {
-      content: "\f286";
-      font-family: "bootstrap-icons";
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%) rotate(180deg);
-      transition: .3s;
-   }
-
-   &:not(.collapsed)::after {
-      transform: translateY(-50%) rotate(0deg);
-   }
-
-   &:not(.collapsed) {
-      opacity: .5 !important;
-   }
-}
-
 .last-vr-hide>.vr:last-child,
 .last-vr-hide>.vr:last-of-type {
    display: none;
@@ -175,15 +161,60 @@ body {
    width: 100% !important;
 }
 
-@media (min-width: 992px) {
+.link-body-emphasis {
+   color: color-mix(in srgb, currentColor 100%, transparent) !important;
+}
 
-   .dropdown:hover>.dropdown-menu,
-   .dropdown:focus-within>.dropdown-menu {
-      display: block;
+.collapse-toggle {
+   position: relative;
+
+   &::after {
+      content: "\f286";
+      font-family: "bootstrap-icons";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%) rotate(180deg);
+      transition: .3s;
    }
 
-   .dropdown:hover>.dropdown-toggler,
-   .dropdown:focus-within>.dropdown-toggler {
-      opacity: .5 !important;
+   &:not(.collapsed)::after {
+      transform: translateY(-50%) rotate(0deg);
    }
+}
+
+.dropdown:hover>.dropdown-menu {
+   display: block;
+}
+
+.dropdown:hover>.link-body-emphasis.dropdown-toggler,
+.link-body-emphasis.collapse-toggle:not(.collapsed),
+.link-body-emphasis:hover,
+.link-body-emphasis.active {
+   color: color-mix(in srgb, currentColor 50%, transparent) !important;
+}
+
+.link-body-emphasis.active:not([role="tablist"] .link-body-emphasis.active:not(:is([href=""], [href="#"]))) {
+   pointer-events: none;
+}
+
+.logo-brand-olshop {
+   width: 100%;
+   height: auto;
+   object-fit: contain;
+   max-height: 50px;
+   max-width: 250px;
+}
+
+.nav[role="tablist"] .link-body-emphasis {
+   white-space: nowrap;
+   min-width: 175px;
+   text-transform: capitalize;
+}
+
+.brand-thumbnails {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   width: 100%;
+   gap: 1rem;
 }
